@@ -66,9 +66,8 @@ class MotionDetectorInstantaneous():
 
     def send_async_email(self, attachment):
 
-        # Define these once; use them twice!
-        strFrom = 'ketchupmeister@gmail.com'
-        strTo = 'ketchupmeister@gmail.com'
+        strFrom = ''
+        strTo = ''
 
         # Create the root message and fill in the from, to, and subject headers
         msgRoot = MIMEMultipart('related')
@@ -99,8 +98,8 @@ class MotionDetectorInstantaneous():
         msgRoot.attach(msgImage)
 
         # Credentials (if needed)
-        username = 'ketchupmeister'
-        password = 'FlamGmail14'
+        username = ''
+        password = ''
 
         # Send the email (this example assumes SMTP authentication is required)
         smtp = smtplib.SMTP()
