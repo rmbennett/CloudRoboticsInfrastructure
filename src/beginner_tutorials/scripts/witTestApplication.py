@@ -117,7 +117,7 @@ def WriteSpeech(WriteData):
             print cmd
             pub.publish(cmd)
             time.sleep(2)
-        elif (witOutput["outcome"]["intent"]).lower() == "Backward":        
+        elif (witOutput["outcome"]["intent"]).lower() == "reverse":        
             cmd.linear.x = 0.8*-1.0
             cmd.angular.z = 0.0
             print cmd
@@ -125,12 +125,12 @@ def WriteSpeech(WriteData):
             time.sleep(2)
         elif (witOutput["outcome"]["intent"]).lower() == "left":        
             cmd.linear.x = -0.8*0.0
-            cmd.angular.z = 0.8*-1.0
+            cmd.angular.z = 0.8*1.0
             print cmd
             time.sleep(2)
         elif (witOutput["outcome"]["intent"]).lower() == "right":        
             cmd.linear.x = -0.8*0.0
-            cmd.angular.z = 0.8*1.0
+            cmd.angular.z = 0.8*-1.0
             print cmd
             time.sleep(2)
         else:
